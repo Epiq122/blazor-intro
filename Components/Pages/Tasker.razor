@@ -21,7 +21,7 @@
         <div class="vstack">
             @foreach (var item in taskerItems)
             {
-                <TaskerLine Item="item"/>
+                <TaskerLine Item="item" OnDeleteCallback="@DeleteTask" OnCompleteCallback="@UpdateTask"/>
             }
         </div>
     </div>
@@ -37,6 +37,16 @@
         ti.Id = Guid.NewGuid();
         taskerItems.Add(ti);
         ti = new TaskerItem();
+    }
+
+    private void DeleteTask(TaskerItem item)
+    {
+        taskerItems.Remove(item);
+    }
+
+    private void UpdateTask(TaskerItem item)
+    {
+        //save item to local storage or database
     }
 
 }

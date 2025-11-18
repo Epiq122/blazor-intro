@@ -1,11 +1,41 @@
 <div class="d-flex flex-row">
     <div>
-        <InputCheckbox @bind-Value="Item.IsComplete"/>
+        <InputCheckbox @bind-Value="Item.IsComplete" @bind-Value:after="OnComplete"/>
     </div>
-    <div class="px-2 flex-grow-1">@Item.Name</div>
-    <div><i class="bi bi-trash-fill text-danger"/></div>
+    <div class="px-2 flex-grow-1 @(Item.IsComplete ? "complete" : "")">@Item.Name</div>
+    <div><a @onclick="OnDelete"><i class="bi bi-trash-fill text-danger"/></a></div>
 </div>
 
 @code {
-    [Parameter] [EditorRequired] public TaskerItem? Item { get; set; }
+
+    /// <summary>
+    ///     Item to display
+    /// </summary>
+    [Parameter]
+    [EditorRequired]
+    public TaskerItem? Item { get; set; }
+
+    /// <summary>
+    ///     delete item callback
+    /// </summary>
+    [Parameter]
+    public EventCallback<TaskerItem> OnDeleteCallback { get; set; }
+
+
+    /// <summary>
+    ///     complete item callback
+    /// </summary>
+    [Parameter]
+    public EventCallback<TaskerItem> OnCompleteCallback { get; set; }
+
+    private async Task OnDelete()
+    {
+        await OnDeleteCallback.InvokeAsync(Item);
+    }
+
+    private async Task OnComplete()
+    {
+        await OnCompleteCallback.InvokeAsync(Item);
+    }
+
 }
