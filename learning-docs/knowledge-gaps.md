@@ -1,6 +1,6 @@
 # Knowledge Gaps & Practice Tasks
 
-**Last Updated:** November 16, 2025
+**Last Updated:** November 18, 2025
 **Purpose:** Track concepts that need reinforcement and provide specific practice tasks for each gap
 
 ---
@@ -21,357 +21,162 @@ After completing each module or section:
 
 | Category                | Open Gaps | Reinforced | Total |
 | ----------------------- | --------- | ---------- | ----- |
-| C# Fundamentals         | 0         | 0          | 0     |
-| Blazor                  | 0         | 0          | 0     |
+| C# Fundamentals         | 2         | 0          | 2     |
+| Blazor                  | 1         | 0          | 1     |
 | Entity Framework Core   | 0         | 0          | 0     |
 | Web APIs                | 0         | 0          | 0     |
 | Authentication/Security | 0         | 0          | 0     |
 | Testing                 | 0         | 0          | 0     |
 | DevOps/Deployment       | 0         | 0          | 0     |
-| **Total**               | **0**     | **0**      | **0** |
+| **Total**               | **3**     | **0**      | **3** |
 
 ---
 
 ## 🔴 C# Fundamentals Gaps
 
-### ❌ Gap: [Topic Name]
+### ❌ Gap: Async void vs async Task in Event Handlers
 
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
+**Status:** 🔴 Open | **Discovered:** Nov 18, 2025 | **Module:** Tasker Component Development
 
 **What I Missed:**
 
-- [Describe what you didn't understand or got wrong]
+- Initially used `async void` for AddTask() and DeleteTask() methods
+- Didn't understand when async void is acceptable vs when to use async Task
+- Confusion about event handlers specifically (when async void is OK)
+- Proper awaiting patterns for fire-and-forget vs critical operations
 
 **Why It Matters:**
 
-- [Explain the importance or real-world usage]
+- async void cannot be awaited and swallows exceptions
+- Can cause race conditions and data loss if not handled properly
+- Critical for data persistence operations (like SaveListAsync)
+- Common interview question for .NET positions
 
 **Practice Tasks:**
 
-1. [ ] [Specific task 1]
-2. [ ] [Specific task 2]
-3. [ ] [Specific task 3]
+1. [ ] Read Stephen Cleary's "Async/Await Best Practices" article thoroughly
+2. [ ] Refactor all async methods in Tasker to use proper return types
+3. [ ] Write demo project showing difference between async void and async Task
+4. [ ] Create examples of proper exception handling in async methods
+5. [ ] Practice converting synchronous methods to async equivalents
 
 **Resources:**
 
-- [Link to documentation]
-- [Tutorial/video reference]
+- [Async/Await Best Practices by Stephen Cleary](https://docs.microsoft.com/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming)
+- [Microsoft Docs - Async Return Types](https://learn.microsoft.com/dotnet/csharp/programming-guide/concepts/async/async-return-types)
 
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+**Status:** 🔴 Not Reinforced
+
+---
+
+### ❌ Gap: LINQ Fundamentals for Database Queries
+
+**Status:** 🔴 Open | **Discovered:** Nov 18, 2025 | **Module:** Preparing for EF Core
+
+**What I Missed:**
+
+- Haven't used LINQ extensively yet (only basic foreach loops)
+- Don't know method syntax vs query syntax
+- No experience with Where(), Select(), OrderBy(), GroupBy(), Join()
+- Will be essential for EF Core database querying
+
+**Why It Matters:**
+
+- LINQ is the primary way to query databases with EF Core
+- Required for 90%+ of .NET jobs in Vancouver
+- More efficient than manual loops for filtering and transforming data
+- Interview questions often test LINQ knowledge
+
+**Practice Tasks:**
+
+1. [ ] Complete "101 LINQ Samples" tutorial from Microsoft
+2. [ ] Practice 20 LINQ exercises on LINQPad
+3. [ ] Convert all foreach loops in Tasker to LINQ (where appropriate)
+4. [ ] Write LINQ queries for: filtering, sorting, grouping, joining
+5. [ ] Compare performance of LINQ vs manual loops
+
+**Resources:**
+
+- [101 LINQ Samples](https://learn.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+- [LINQPad](https://www.linqpad.net/) - Interactive LINQ learning tool
+- [Microsoft LINQ Documentation](https://learn.microsoft.com/dotnet/csharp/linq/)
+
+**Status:** 🔴 Not Reinforced
 
 ---
 
 ## 🟦 Blazor Gaps
 
-### ❌ Gap: [Topic Name]
+### ❌ Gap: StateHasChanged() - When and Why to Use It
 
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
+**Status:** 🔴 Open | **Discovered:** Nov 18, 2025 | **Module:** Tasker Component
 
 **What I Missed:**
 
-- [Description]
+- Tasker works without calling StateHasChanged() explicitly
+- Don't fully understand when Blazor auto-detects changes vs when manual call needed
+- Confusion about re-rendering triggers in Blazor
+- Might need it for more complex scenarios (background tasks, etc.)
 
 **Why It Matters:**
 
-- [Importance]
+- Critical for manual UI updates when Blazor doesn't auto-detect changes
+- Required for background tasks, timers, external events
+- Performance implications if overused
+- Common issue in complex Blazor applications
 
 **Practice Tasks:**
 
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
+1. [ ] Read Blazor rendering documentation thoroughly
+2. [ ] Create demo with background task requiring StateHasChanged()
+3. [ ] Experiment with timer-based updates in component
+4. [ ] Build component with external event subscription
+5. [ ] Document scenarios where StateHasChanged() is needed
 
 **Resources:**
 
-- [Resources]
+- [Blazor Rendering](https://learn.microsoft.com/aspnet/core/blazor/components/rendering)
+- [ASP.NET Core Blazor component lifecycle](https://learn.microsoft.com/aspnet/core/blazor/components/lifecycle)
 
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+**Status:** 🔴 Not Reinforced
 
 ---
 
 ## 🟢 Entity Framework Core Gaps
 
-### ❌ Gap: [Topic Name]
-
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
-
-**What I Missed:**
-
-- [Description]
-
-**Why It Matters:**
-
-- [Importance]
-
-**Practice Tasks:**
-
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
-
-**Resources:**
-
-- [Resources]
-
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+_No gaps identified yet - will populate after starting EF Core module this week_
 
 ---
 
 ## 🟣 Web API Gaps
 
-### ❌ Gap: [Topic Name]
-
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
-
-**What I Missed:**
-
-- [Description]
-
-**Why It Matters:**
-
-- [Importance]
-
-**Practice Tasks:**
-
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
-
-**Resources:**
-
-- [Resources]
-
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+_No gaps identified yet - will populate after API development_
 
 ---
 
 ## 🟠 Authentication & Security Gaps
 
-### ❌ Gap: [Topic Name]
-
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
-
-**What I Missed:**
-
-- [Description]
-
-**Why It Matters:**
-
-- [Importance]
-
-**Practice Tasks:**
-
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
-
-**Resources:**
-
-- [Resources]
-
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+_No gaps identified yet - will populate after Identity implementation_
 
 ---
 
 ## 🔵 Testing Gaps
 
-### ❌ Gap: [Topic Name]
-
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
-
-**What I Missed:**
-
-- [Description]
-
-**Why It Matters:**
-
-- [Importance]
-
-**Practice Tasks:**
-
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
-
-**Resources:**
-
-- [Resources]
-
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
+_No gaps identified yet - will populate after testing module_
 
 ---
 
 ## 🟤 DevOps & Deployment Gaps
 
-### ❌ Gap: [Topic Name]
-
-**Status:** 🔴 Open | **Discovered:** [Date] | **Module:** [Module Name]
-
-**What I Missed:**
-
-- [Description]
-
-**Why It Matters:**
-
-- [Importance]
-
-**Practice Tasks:**
-
-1. [ ] [Task 1]
-2. [ ] [Task 2]
-3. [ ] [Task 3]
-
-**Resources:**
-
-- [Resources]
-
-**Status:** 🔴 Not Reinforced | ✅ Reinforced on [Date]
-
----
-
-## 🎓 Common Practice Task Templates
-
-### For Syntax/Concepts
-
-1. Write code from scratch without reference
-2. Explain concept to someone (rubber duck method)
-3. Find 3 real-world examples in open-source projects
-4. Create cheat sheet with key points
-
-### For Patterns/Architecture
-
-1. Implement pattern in small demo project
-2. Refactor existing code to use pattern
-3. Compare with alternative approaches
-4. Document when to use and when not to use
-
-### For Tools/Frameworks
-
-1. Build "hello world" example
-2. Complete official getting-started tutorial
-3. Build small CRUD app using tool
-4. Read documentation cover-to-cover
-
----
-
-## 📝 Examples of Well-Defined Gaps & Tasks
-
-### Example 1: LINQ Gaps
-
-#### ❌ Gap: Complex LINQ Queries with Multiple Joins
-
-**Status:** 🔴 Open | **Discovered:** Nov 16, 2025 | **Module:** Entity Framework Basics
-
-**What I Missed:**
-
-- How to join multiple tables using LINQ method syntax
-- Understanding when to use `Include()` vs explicit joins
-- Performance implications of different query approaches
-
-**Why It Matters:**
-
-- LINQ is essential for querying databases in EF Core
-- Efficient queries improve application performance
-- Common interview topic for .NET positions
-
-**Practice Tasks:**
-
-1. [ ] Write 10 LINQ queries joining 2+ tables using both query and method syntax
-2. [ ] Refactor existing foreach loops in a project to use LINQ
-3. [ ] Compare SQL generated by different LINQ approaches using SQL Profiler
-4. [ ] Complete LINQPad exercises for joins and grouping
-
-**Resources:**
-
-- [Microsoft LINQ Documentation](https://learn.microsoft.com/dotnet/csharp/linq/)
-- [LINQPad](https://www.linqpad.net/) - Interactive LINQ learning tool
-- [101 LINQ Samples](https://learn.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
-
-**Status:** 🔴 Not Reinforced
-
----
-
-### Example 2: Async/Await Gaps
-
-#### ❌ Gap: Proper Async/Await Usage in Blazor
-
-**Status:** 🔴 Open | **Discovered:** Nov 16, 2025 | **Module:** Blazor Component Lifecycle
-
-**What I Missed:**
-
-- Difference between `OnInitialized()` and `OnInitializedAsync()`
-- When to use `Task.Run()` vs direct async methods
-- Avoiding deadlocks with `.ConfigureAwait(false)`
-- Proper error handling with async methods
-
-**Why It Matters:**
-
-- Blazor heavily relies on async operations for data fetching
-- Improper async usage can freeze UI or cause errors
-- Understanding async is critical for responsive applications
-
-**Practice Tasks:**
-
-1. [ ] Convert 5 synchronous methods to async in current project
-2. [ ] Create demo showing proper async lifecycle in Blazor components
-3. [ ] Implement proper loading states during async operations
-4. [ ] Read "Async/Await Best Practices" article by Stephen Cleary
-5. [ ] Handle exceptions properly in async component methods
-
-**Resources:**
-
-- [Async/Await Best Practices](https://docs.microsoft.com/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming)
-- [Blazor Component Lifecycle](https://learn.microsoft.com/aspnet/core/blazor/components/lifecycle)
-
-**Status:** 🔴 Not Reinforced
-
----
-
-### Example 3: Dependency Injection Gaps
-
-#### ❌ Gap: Service Lifetimes (Transient vs Scoped vs Singleton)
-
-**Status:** 🔴 Open | **Discovered:** Nov 16, 2025 | **Module:** ASP.NET Core Fundamentals
-
-**What I Missed:**
-
-- When to use each service lifetime
-- Impact on memory and performance
-- Risks of injecting scoped service into singleton
-- How Blazor Server handles scoped services differently
-
-**Why It Matters:**
-
-- Incorrect lifetime can cause memory leaks or unexpected behavior
-- Essential pattern in .NET development
-- Common source of bugs for beginners
-
-**Practice Tasks:**
-
-1. [ ] Create demo project with all three lifetime types
-2. [ ] Intentionally create a scoped-in-singleton bug and fix it
-3. [ ] Write documentation explaining each lifetime with examples
-4. [ ] Refactor existing services in BlazorIntro with proper lifetimes
-5. [ ] Research how Blazor WASM handles service lifetimes differently than Server
-
-**Resources:**
-
-- [Dependency Injection in .NET](https://learn.microsoft.com/dotnet/core/extensions/dependency-injection)
-- [Service Lifetimes Explained](https://learn.microsoft.com/aspnet/core/fundamentals/dependency-injection#service-lifetimes)
-
-**Status:** 🔴 Not Reinforced
+_No gaps identified yet - will populate after deployment_
 
 ---
 
 ## 🏆 Reinforced Gaps (Archive)
 
-Track previously identified gaps that have been successfully reinforced.
+_Track previously identified gaps that have been successfully reinforced._
 
-### ✅ Gap: [Topic] - Reinforced on [Date]
-
-**Original Issue:** [Brief description]
-**How Reinforced:** [What you did to master it]
-**Confidence Level:** ⭐⭐⭐⭐⭐ (5/5)
+_None yet - will move gaps here as they are mastered_
 
 ---
 
@@ -384,6 +189,8 @@ Track previously identified gaps that have been successfully reinforced.
 3. Add gaps with specific practice tasks
 4. Schedule time to work on 2-3 gaps next week
 5. Mark reinforced gaps and move to archive
+
+**Next Review:** November 24, 2025
 
 **Monthly Deep Review:**
 
@@ -398,24 +205,27 @@ Track previously identified gaps that have been successfully reinforced.
 
 Ranked by importance for job readiness:
 
-1. **Gap:** [Not yet identified]
+1. **Gap:** LINQ Fundamentals for Database Queries
 
-   - **Practice By:** [Date]
+   - **Practice By:** December 1, 2025
+   - **Priority:** Critical - needed for EF Core
 
-2. **Gap:** [Not yet identified]
+2. **Gap:** Async void vs async Task in Event Handlers
 
-   - **Practice By:** [Date]
+   - **Practice By:** November 24, 2025
+   - **Priority:** High - affects data integrity
 
-3. **Gap:** [Not yet identified]
+3. **Gap:** StateHasChanged() Understanding
 
-   - **Practice By:** [Date]
+   - **Practice By:** December 8, 2025
+   - **Priority:** Medium - good to know for complex scenarios
 
-4. **Gap:** [Not yet identified]
+4. **Gap:** TBD (will add after EF Core module)
 
-   - **Practice By:** [Date]
+   - **Practice By:** TBD
 
-5. **Gap:** [Not yet identified]
-   - **Practice By:** [Date]
+5. **Gap:** TBD (will add after API development)
+   - **Practice By:** TBD
 
 ---
 
@@ -423,43 +233,69 @@ Ranked by importance for job readiness:
 
 **How to Identify Gaps:**
 
-- ❓ Concepts you needed to Google multiple times
+- ❓ Concepts you needed to Google multiple times ✅ (async void)
 - ❓ Topics you skipped in tutorials
 - ❓ Questions you couldn't answer in practice problems
-- ❓ Code patterns you copied without understanding
+- ❓ Code patterns you copied without understanding ✅ (lifecycle methods initially)
 - ❓ Interview questions you couldn't answer
-- ❓ Errors you fixed without understanding why
-- ❓ Concepts peers/online discussions assume everyone knows
+- ❓ Errors you fixed without understanding why ✅ (localStorage null handling)
+- ❓ Concepts peers/online discussions assume everyone knows ✅ (LINQ, StateHasChanged)
 
 **Red Flags:**
 
-- 🚩 "I'll learn this later" (Add to gaps immediately)
-- 🚩 "I kind of understand" (Need reinforcement)
-- 🚩 "It works, but I'm not sure why" (Major gap)
-- 🚩 Copy-pasting code without modification (Understanding gap)
+- 🚩 "I'll learn this later" → Add to gaps immediately
+- 🚩 "I kind of understand" → Need reinforcement ✅ (StateHasChanged)
+- 🚩 "It works, but I'm not sure why" → Major gap ✅ (async patterns)
+- 🚩 Copy-pasting code without modification → Understanding gap
 
 ---
 
 ## 📊 Gap Analysis Dashboard
 
-### This Month's Stats
+### This Week's Stats (Nov 18, 2025)
 
-- **Gaps Identified:** 0
+- **Gaps Identified:** 3
 - **Gaps Reinforced:** 0
-- **Active Gaps:** 0
-- **Success Rate:** N/A
+- **Active Gaps:** 3
+- **Success Rate:** N/A (first week)
 
 ### Most Common Gap Categories
 
-1. [Category] - X gaps
-2. [Category] - X gaps
-3. [Category] - X gaps
+1. C# Fundamentals - 2 gaps
+2. Blazor - 1 gap
 
 ### Average Time to Reinforce
 
-- **C# Fundamentals:** N/A days
-- **Blazor:** N/A days
-- **Backend:** N/A days
+- **C# Fundamentals:** TBD
+- **Blazor:** TBD
+- **Backend:** TBD
+
+---
+
+## 📝 Action Plan for This Week
+
+**Focus:** Address LINQ gap before starting EF Core
+
+**Monday-Tuesday:**
+
+- Complete 101 LINQ Samples (at least 50%)
+- Install LINQPad and practice queries
+
+**Wednesday:**
+
+- Finish LINQ samples
+- Refactor Tasker to use LINQ where appropriate
+
+**Thursday-Friday:**
+
+- Start EF Core module
+- Apply LINQ knowledge to database queries
+
+**Weekend:**
+
+- Practice async/await patterns
+- Read Stephen Cleary's article
+- Document learnings
 
 ---
 

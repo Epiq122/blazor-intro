@@ -1,6 +1,6 @@
 # Job Readiness Matrix - Junior .NET Developer (Vancouver)
 
-**Last Updated:** November 16, 2025
+**Last Updated:** November 18, 2025
 **Target Role:** Junior .NET Developer
 **Location:** Vancouver, BC
 **Review Frequency:** Weekly (Every Sunday)
@@ -9,20 +9,20 @@
 
 ## 📊 Overall Readiness Score
 
-**Current Level:** 🟡 Beginner (25/100)
+**Current Level:** 🟡 Beginner (30/100) ⬆️ +5 from last week
 **Target Level:** 🟢 Job Ready (80/100)
 
-| Category | Score | Status |
-|----------|-------|--------|
-| C# Fundamentals | 40% | 🟡 In Progress |
-| Blazor/ASP.NET Core | 30% | 🟡 In Progress |
-| Database & EF Core | 10% | 🔴 Needs Work |
-| APIs & Web Services | 10% | 🔴 Needs Work |
-| Authentication & Security | 5% | 🔴 Needs Work |
-| Version Control (Git) | 50% | 🟡 In Progress |
-| Testing | 0% | 🔴 Not Started |
-| DevOps & Deployment | 5% | 🔴 Needs Work |
-| **Overall** | **25%** | 🟡 **In Progress** |
+| Category | Score | Status | Change |
+|----------|-------|--------|--------|
+| C# Fundamentals | 45% | 🟡 In Progress | +5% |
+| Blazor/ASP.NET Core | 40% | 🟡 In Progress | +10% |
+| Database & EF Core | 10% | 🔴 Needs Work | - |
+| APIs & Web Services | 10% | 🔴 Needs Work | - |
+| Authentication & Security | 5% | 🔴 Needs Work | - |
+| Version Control (Git) | 50% | 🟡 In Progress | - |
+| Testing | 0% | 🔴 Not Started | - |
+| DevOps & Deployment | 5% | 🔴 Needs Work | - |
+| **Overall** | **30%** | 🟡 **In Progress** | **+5%** |
 
 ---
 
@@ -40,22 +40,28 @@
 
 | Skill | Required Level | My Level | Status | Priority |
 |-------|----------------|----------|--------|----------|
-| C# Syntax & Basics | ⭐⭐⭐ | 🟡 Learning | 50% | High |
+| C# Syntax & Basics | ⭐⭐⭐ | 🟡 Learning | 55% ⬆️ | High |
 | OOP Principles | ⭐⭐⭐ | 🟡 Learning | 40% | High |
 | LINQ | ⭐⭐⭐ | 🔴 Gap | 20% | High |
-| Async/Await | ⭐⭐⭐ | 🟡 Learning | 30% | High |
-| Collections & Generics | ⭐⭐⭐ | 🟡 Learning | 40% | High |
-| Exception Handling | ⭐⭐ | 🔴 Gap | 20% | Medium |
+| Async/Await | ⭐⭐⭐ | 🟡 Learning | 45% ⬆️ | High |
+| Collections & Generics | ⭐⭐⭐ | 🟡 Learning | 45% ⬆️ | High |
+| Exception Handling | ⭐⭐ | 🟡 Learning | 30% ⬆️ | Medium |
 | Dependency Injection | ⭐⭐⭐ | 🔴 Gap | 15% | High |
 | Interfaces & Abstractions | ⭐⭐⭐ | 🟡 Learning | 30% | High |
 | Delegates & Events | ⭐⭐ | 🔴 Gap | 10% | Medium |
 | Extension Methods | ⭐⭐ | 🔴 Gap | 10% | Low |
 
+**Recent Progress:**
+- ✅ Learned async/await patterns in component lifecycle methods
+- ✅ Used List<T> and Guid for task management
+- ✅ Implemented try-catch for localStorage error handling
+- ✅ Worked with nullable reference types (?)
+
 **Action Items:**
 - [ ] Complete C# fundamentals course section
 - [ ] Practice LINQ with 10+ exercises
 - [ ] Build project demonstrating DI pattern
-- [ ] Learn async/await best practices
+- [ ] Deepen async/await best practices understanding
 
 ---
 
@@ -63,22 +69,31 @@
 
 | Skill | Required Level | My Level | Status | Priority |
 |-------|----------------|----------|--------|----------|
-| Blazor Components | ⭐⭐ | 🟡 Learning | 40% | Medium |
-| Razor Syntax | ⭐⭐⭐ | 🟡 Learning | 45% | High |
+| Blazor Components | ⭐⭐ | 🟡 Learning | 60% ⬆️ | Medium |
+| Razor Syntax | ⭐⭐⭐ | 🟡 Learning | 55% ⬆️ | High |
 | MVC Pattern | ⭐⭐⭐ | 🔴 Gap | 10% | High |
 | Middleware Pipeline | ⭐⭐ | 🔴 Gap | 5% | Medium |
-| Routing | ⭐⭐⭐ | 🟡 Learning | 35% | High |
-| State Management | ⭐⭐⭐ | 🟡 Learning | 25% | High |
-| Form Validation | ⭐⭐⭐ | 🔴 Gap | 10% | High |
+| Routing | ⭐⭐⭐ | 🟡 Learning | 50% ⬆️ | High |
+| State Management | ⭐⭐⭐ | 🟡 Learning | 40% ⬆️ | High |
+| Form Validation | ⭐⭐⭐ | 🟡 Learning | 50% ⬆️ | High |
 | Configuration Management | ⭐⭐ | 🔴 Gap | 10% | Medium |
 | SignalR (Real-time) | ⭐ | 🔴 Gap | 0% | Low |
 | Blazor WASM vs Server | ⭐⭐ | 🟡 Learning | 30% | Medium |
 
+**Recent Progress:**
+- ✅ Built complete Tasker component with CRUD operations
+- ✅ Mastered component lifecycle (OnInitializedAsync, OnAfterRenderAsync)
+- ✅ Implemented EditForm with DataAnnotationsValidator
+- ✅ Created parent-child component architecture with EventCallback
+- ✅ Used component references (@ref) for programmatic control
+- ✅ Applied conditional CSS classes dynamically
+- ✅ Implemented JavaScript interop for browser APIs
+
 **Action Items:**
-- [ ] Build CRUD application with Blazor
+- [ ] Build CRUD application with database (not localStorage)
 - [ ] Learn MVC pattern thoroughly
-- [ ] Implement form validation in project
 - [ ] Study middleware pipeline
+- [ ] Explore Blazor Server vs WASM differences
 
 ---
 
@@ -92,16 +107,20 @@
 | DbContext & DbSet | ⭐⭐⭐ | 🔴 Gap | 10% | High |
 | Querying with LINQ | ⭐⭐⭐ | 🔴 Gap | 15% | High |
 | Relationships (1:1, 1:M, M:M) | ⭐⭐⭐ | 🔴 Gap | 10% | High |
-| Data Annotations | ⭐⭐ | 🔴 Gap | 5% | Medium |
+| Data Annotations | ⭐⭐ | 🟡 Learning | 30% ⬆️ | Medium |
 | Fluent API | ⭐⭐ | 🔴 Gap | 0% | Medium |
 | Repository Pattern | ⭐⭐ | 🔴 Gap | 0% | Medium |
 | Database Performance | ⭐ | 🔴 Gap | 0% | Low |
 
+**Recent Progress:**
+- ✅ Learned [Required] data annotation for validation
+- ✅ Understand need to migrate from localStorage to database
+
 **Action Items:**
-- [ ] ⚠️ **CRITICAL**: Learn EF Core fundamentals this week
+- [ ] ⚠️ **CRITICAL**: Start EF Core fundamentals THIS WEEK
 - [ ] Set up SQL Server / SQLite database
 - [ ] Create first migration and update database
-- [ ] Build project with proper entity relationships
+- [ ] Build Tasker with database instead of localStorage
 
 ---
 
@@ -121,9 +140,9 @@
 | CORS | ⭐⭐ | 🔴 Gap | 0% | Medium |
 
 **Action Items:**
-- [ ] ⚠️ **CRITICAL**: Build standalone Web API project
-- [ ] Create RESTful endpoints for CRUD operations
-- [ ] Connect Blazor app to API
+- [ ] ⚠️ **CRITICAL**: Build standalone Web API project NEXT
+- [ ] Create RESTful endpoints for Tasker CRUD operations
+- [ ] Connect Blazor app to API using HttpClient
 - [ ] Learn DTO pattern
 
 ---
@@ -139,8 +158,11 @@
 | Role-Based Access | ⭐⭐ | 🔴 Gap | 0% | Medium |
 | HTTPS/SSL | ⭐⭐ | 🔴 Gap | 5% | Medium |
 | OWASP Top 10 | ⭐⭐ | 🔴 Gap | 5% | Medium |
-| Input Validation | ⭐⭐⭐ | 🔴 Gap | 15% | High |
+| Input Validation | ⭐⭐⭐ | 🟡 Learning | 40% ⬆️ | High |
 | XSS/CSRF Protection | ⭐⭐ | 🔴 Gap | 0% | Medium |
+
+**Recent Progress:**
+- ✅ Implemented client-side validation with data annotations
 
 **Action Items:**
 - [ ] ⚠️ **CRITICAL**: Implement ASP.NET Core Identity
@@ -183,7 +205,7 @@
 
 **Action Items:**
 - [ ] Learn xUnit framework
-- [ ] Write unit tests for business logic
+- [ ] Write unit tests for TaskerItem validation logic
 - [ ] Achieve 50%+ code coverage on one project
 
 ---
@@ -211,14 +233,19 @@
 
 | Skill | Required Level | My Level | Status | Priority |
 |-------|----------------|----------|--------|----------|
-| Problem-Solving | ⭐⭐⭐ | 🟡 Learning | 50% | High |
-| Code Documentation | ⭐⭐⭐ | 🟡 Learning | 40% | High |
-| Debugging Skills | ⭐⭐⭐ | 🟡 Learning | 45% | High |
-| Reading Documentation | ⭐⭐⭐ | 🟡 Learning | 55% | High |
+| Problem-Solving | ⭐⭐⭐ | 🟡 Learning | 55% ⬆️ | High |
+| Code Documentation | ⭐⭐⭐ | 🟡 Learning | 50% ⬆️ | High |
+| Debugging Skills | ⭐⭐⭐ | 🟡 Learning | 50% ⬆️ | High |
+| Reading Documentation | ⭐⭐⭐ | 🟡 Learning | 60% ⬆️ | High |
 | Asking Questions | ⭐⭐⭐ | 🟡 Learning | 50% | High |
 | Time Management | ⭐⭐ | 🟡 Learning | 60% | Medium |
 | Communication | ⭐⭐⭐ | 🟡 Learning | 55% | High |
-| Learning Agility | ⭐⭐⭐ | 🟡 Learning | 65% | High |
+| Learning Agility | ⭐⭐⭐ | 🟡 Learning | 70% ⬆️ | High |
+
+**Recent Progress:**
+- ✅ Successfully debugged async/await issues in lifecycle methods
+- ✅ Read and applied Microsoft documentation for JS interop
+- ✅ Added XML comments to component parameters
 
 ---
 
@@ -226,25 +253,30 @@
 
 These are **non-negotiable** for junior .NET positions in Vancouver:
 
-1. **Entity Framework Core** ⚠️
+1. **Entity Framework Core** ⚠️ URGENT
    - Status: 🔴 10% | Target: 70%+ by Dec 15
-   - Action: Complete EF Core module this week
+   - Action: **START EF CORE MODULE THIS WEEK**
+   - Progress: Ready to begin - have data model concepts from Tasker
 
 2. **Web API Development** ⚠️
    - Status: 🔴 10% | Target: 70%+ by Dec 22
-   - Action: Build complete REST API project
+   - Action: Build REST API for Tasker after learning EF Core
+   - Progress: Understand CRUD operations from localStorage implementation
 
 3. **ASP.NET Core Identity** ⚠️
    - Status: 🔴 5% | Target: 65%+ by Dec 29
-   - Action: Implement authentication in one project
+   - Action: Implement authentication in Tasker
+   - Progress: Need API foundation first
 
 4. **Unit Testing** ⚠️
    - Status: 🔴 0% | Target: 60%+ by Jan 5
-   - Action: Learn xUnit and write tests
+   - Action: Learn xUnit and write tests for Tasker logic
+   - Progress: Have testable business logic now (TaskerItem validation)
 
 5. **LINQ Proficiency** ⚠️
    - Status: 🔴 20% | Target: 75%+ by Dec 1
    - Action: Daily LINQ practice exercises
+   - Progress: Will be essential for EF Core querying
 
 ---
 
@@ -261,8 +293,8 @@ These are **non-negotiable** for junior .NET positions in Vancouver:
 - 🔴 Azure Cloud (60%)
 - 🔴 Docker/Containers (50%)
 - 🔴 CI/CD (45%)
-- Blazor (30%)
-- Microservices (25%)
+- ✅ Blazor (30%) - Growing demand
+- 🔴 Microservices (25%)
 
 ### Nice-to-Have Skills
 - React/Angular (for full-stack roles)
@@ -276,30 +308,33 @@ These are **non-negotiable** for junior .NET positions in Vancouver:
 
 ## ✅ Weekly Action Plan
 
-### Week of November 17-23, 2025
+### Week of November 18-24, 2025
 
-**Focus:** Backend Fundamentals Week
+**Focus:** Backend Foundations - EF Core & Database
 
-1. **Monday-Wednesday**: Entity Framework Core
-   - Complete EF Core tutorial
-   - Set up database connection
-   - Create first migration
+1. **Monday-Tuesday**: Entity Framework Core Basics
+   - Complete EF Core getting started tutorial
+   - Understand DbContext and DbSet concepts
+   - Learn Code-First migrations
 
-2. **Thursday-Friday**: Web API Basics
-   - Build simple API project
-   - Implement CRUD endpoints
-   - Test with Postman
+2. **Wednesday-Thursday**: Database Setup & Migrations
+   - Install SQL Server LocalDB or PostgreSQL
+   - Create TaskerDb database project
+   - Define TaskerItem entity with EF Core
+   - Create and run first migration
 
-3. **Weekend**: Integration Practice
-   - Connect BlazorIntro to new API
-   - Replace mock data with real API calls
-   - Update project documentation
+3. **Friday-Weekend**: Tasker Database Integration
+   - Replace localStorage with EF Core
+   - Implement CRUD operations with DbContext
+   - Test data persistence across restarts
+   - Update documentation
 
 **Success Metrics:**
 - [ ] Working database connection
-- [ ] 3+ API endpoints functional
-- [ ] Blazor app consuming API
+- [ ] TaskerItem stored in database
+- [ ] CRUD operations functional
 - [ ] Update weekly-progress.md
+- [ ] **Skill increase: EF Core to 40%+**
 
 ---
 
@@ -307,26 +342,28 @@ These are **non-negotiable** for junior .NET positions in Vancouver:
 
 ### Month 1 (November 16 - December 15)
 **Focus:** Backend & Database Mastery
-- ✅ EF Core proficiency (70%+)
-- ✅ Build 2 full-stack projects with database
-- ✅ Master LINQ queries
-- ✅ Implement proper architecture (services, repositories)
+- ✅ Blazor fundamentals (DONE - Tasker component)
+- 🟡 EF Core proficiency (70%+) - IN PROGRESS
+- ⬜ Build 2 full-stack projects with database
+- ⬜ Master LINQ queries
+- ⬜ Implement proper architecture (services, repositories)
 
 ### Month 2 (December 16 - January 15)
 **Focus:** APIs, Security & Testing
-- ✅ Build standalone Web API project
-- ✅ Implement ASP.NET Core Identity
-- ✅ JWT authentication
-- ✅ Write unit tests (60% coverage)
+- ⬜ Build standalone Web API project
+- ⬜ Implement ASP.NET Core Identity
+- ⬜ JWT authentication
+- ⬜ Write unit tests (60% coverage)
+- ⬜ Integrate Blazor with API using HttpClient
 
 ### Month 3 (January 16 - February 15)
 **Focus:** DevOps & Portfolio Polish
-- ✅ Learn Docker basics
-- ✅ Deploy 3 projects to cloud
-- ✅ Set up CI/CD pipeline
-- ✅ Polish portfolio projects
-- ✅ Create technical blog posts
-- ✅ Resume ready for applications
+- ⬜ Learn Docker basics
+- ⬜ Deploy 3 projects to cloud
+- ⬜ Set up CI/CD pipeline
+- ⬜ Polish portfolio projects
+- ⬜ Create technical blog posts
+- ⬜ Resume ready for applications
 
 ---
 
@@ -335,11 +372,11 @@ These are **non-negotiable** for junior .NET positions in Vancouver:
 | Date | Overall Score | Notes |
 |------|---------------|-------|
 | Nov 16, 2025 | 25% | Initial assessment - Blazor basics in progress |
-| Nov 23, 2025 | TBD | Target: 30% - EF Core foundation |
-| Nov 30, 2025 | TBD | Target: 35% - API development started |
-| Dec 7, 2025 | TBD | Target: 40% - Authentication basics |
-| Dec 14, 2025 | TBD | Target: 45% - Testing introduced |
-| Dec 21, 2025 | TBD | Target: 50% - Mid-point milestone |
+| Nov 18, 2025 | 30% | ✅ Tasker component complete - JS interop, forms, lifecycle |
+| Nov 24, 2025 | TBD | Target: 35% - EF Core foundation |
+| Dec 1, 2025 | TBD | Target: 40% - API development started |
+| Dec 7, 2025 | TBD | Target: 45% - Authentication basics |
+| Dec 14, 2025 | TBD | Target: 50% - Mid-point milestone |
 
 ---
 
@@ -353,4 +390,9 @@ These are **non-negotiable** for junior .NET positions in Vancouver:
 *This matrix is reviewed and updated every Sunday. Don't skip critical backend topics - they are essential for employability.*
 
 **⚠️ ENFORCEMENT NOTICE:**
-If progress shows jumping to advanced topics before mastering EF Core, Identity, APIs, or Docker, this document will remind you to go back to fundamentals.
+You've successfully completed Blazor fundamentals with the Tasker component. **DO NOT** build more frontend-only features. Your next focus MUST be:
+1. Entity Framework Core (this week)
+2. Web API development (next week)
+3. Authentication (following week)
+
+These backend skills are non-negotiable for job readiness.

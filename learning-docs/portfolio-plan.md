@@ -31,12 +31,45 @@
 
 ---
 
+# Portfolio Plan & Project Tracker
+
+**Last Updated:** November 18, 2025
+**Goal:** Build 3-5 production-ready projects for job applications
+**Target Completion:** February 15, 2026
+
+---
+
+## 🎯 Portfolio Requirements
+
+### What Vancouver Employers Want to See
+
+✅ **Clean, professional GitHub profile**
+✅ **3-5 substantial projects** (not just tutorials)
+✅ **Full-stack capabilities** (frontend + backend + database)
+✅ **Authentication & security** implemented
+✅ **Deployed & live demos** (not just source code)
+✅ **Professional README files** with screenshots
+✅ **Consistent commit history** (shows ongoing development)
+✅ **Unit tests** (demonstrates quality mindset)
+✅ **Modern tech stack** (.NET 8+, recent libraries)
+
+### Differentiators for Junior Roles
+
+⭐ **Docker containerization**
+⭐ **CI/CD pipelines**
+⭐ **API documentation** (Swagger)
+⭐ **Responsive design** (mobile-friendly)
+⭐ **Error handling & logging**
+⭐ **Code comments & documentation**
+
+---
+
 ## 📋 Portfolio Project Pipeline
 
 | #   | Project Name       | Type      | Status         | Priority | Production Ready |
 | --- | ------------------ | --------- | -------------- | -------- | ---------------- |
-| 1   | BlazorIntro        | Learning  | 🟡 In Progress | Low      | 🔴 No            |
-| 2   | Task Manager Pro   | Portfolio | 🔴 Planned     | High     | 🔴 No            |
+| 1   | BlazorIntro        | Learning  | 🟡 In Progress | Low      | 🔴 No (30%)      |
+| 2   | Task Manager Pro   | Portfolio | 🟡 Ready to Start | High     | 🔴 No (0%)       |
 | 3   | Blog Platform      | Portfolio | 🔴 Planned     | High     | 🔴 No            |
 | 4   | E-Commerce Store   | Portfolio | 🔴 Planned     | Medium   | 🔴 No            |
 | 5   | Recipe Sharing App | Portfolio | 🔴 Planned     | Medium   | 🔴 No            |
@@ -45,52 +78,124 @@
 
 ## 🚀 Project 1: BlazorIntro (Learning Project)
 
-**Status:** 🟡 In Progress | **Production Ready:** 🔴 No (15%)
+**Status:** 🟡 In Progress | **Production Ready:** 🔴 No (30%) ⬆️ +15%
 
 ### Overview
 
-Basic Blazor WebAssembly learning project to understand fundamentals.
+Blazor WebAssembly learning project progressing from basics to full-stack features.
+
+### Recent Updates (Nov 18, 2025)
+
+✅ **Tasker Component Completed**
+- Full CRUD operations (Add, Delete, Mark Complete)
+- localStorage persistence with JavaScript interop
+- Form validation with data annotations
+- Parent-child component architecture (Tasker + TaskerLine)
+- Component lifecycle implementation
+- EventCallback pattern for component communication
 
 ### Decision: Publish or Not?
 
-❌ **Do NOT publish to portfolio** - Too basic, no backend, no real functionality
+🟡 **MAYBE - After Database Migration**
+- Currently too basic (client-side only, no backend)
+- ✅ Shows Blazor component skills
+- ✅ Good form validation example
+- ✅ JavaScript interop demonstration
+- ❌ No database integration yet
+- ❌ No authentication
+- ❌ No API layer
+
+**Path to Portfolio-Ready:**
+1. Migrate Tasker to use EF Core + SQL Server (this week)
+2. Create ASP.NET Core Web API backend (next week)
+3. Implement user authentication (following week)
+4. Add user-specific task lists
+5. Deploy to Azure
+6. Polish README with screenshots
+
+**Timeline:** If completed with backend by Dec 1, could be portfolio piece #1
 
 ### What It Taught
 
-- Blazor component structure
-- Routing and navigation
-- Basic state management
-- Scoped CSS
+- ✅ Blazor component structure and lifecycle
+- ✅ Routing and navigation
+- ✅ Form validation with data annotations
+- ✅ JavaScript interop (localStorage)
+- ✅ Component communication (EventCallback, Parameters)
+- ✅ State management and persistence
+- ✅ Async/await patterns
+- ✅ Scoped CSS
+- ⏳ Database integration (upcoming)
+- ⏳ API development (upcoming)
+- ⏳ Authentication (upcoming)
 
-### Next Steps
+### Next Steps for This Project
 
-- Use as practice ground for new concepts
-- Keep as reference for syntax
-- Not suitable for job applications
+**This Week (Nov 18-24):**
+- [ ] Learn Entity Framework Core basics
+- [ ] Set up SQL Server LocalDB or PostgreSQL
+- [ ] Create TaskerItem entity model
+- [ ] Implement DbContext and migrations
+- [ ] Replace localStorage with database calls
+- [ ] Test CRUD operations with database
+
+**Next Week (Nov 25-Dec 1):**
+- [ ] Create ASP.NET Core Web API project
+- [ ] Build TaskerController with CRUD endpoints
+- [ ] Refactor Blazor app to use HttpClient
+- [ ] Remove localStorage code
+- [ ] Add loading states during API calls
+- [ ] Implement error handling
+
+**Following Week (Dec 2-8):**
+- [ ] Add ASP.NET Core Identity
+- [ ] Create login/register pages
+- [ ] Associate tasks with users (UserId foreign key)
+- [ ] Secure API endpoints
+- [ ] Test multi-user scenarios
 
 ---
 
 ## 🚀 Project 2: Task Manager Pro
 
-**Status:** 🔴 Planned | **Production Ready:** 🔴 No (0%)
+**Status:** 🟡 Ready to Start | **Production Ready:** 🔴 No (0%)
 **Target Completion:** December 15, 2025
+**Based On:** BlazorIntro Tasker component
 
 ### Why This Project?
 
+- Build on existing Tasker knowledge
 - Demonstrates full-stack skills (CRUD operations, database, API)
 - Common project type, easy to explain in interviews
 - Opportunity to show authentication and authorization
 - Real-world applicability
+- **Foundation already built with Tasker component**
+
+### Decision
+
+🎯 **MERGE WITH BlazorIntro**
+
+Instead of creating a separate project, **upgrade BlazorIntro/Tasker to be Task Manager Pro**:
+- Already have frontend working
+- Just need backend integration
+- Faster path to portfolio-ready project
+- Shows evolution of a project (commit history)
+- Can always create new repo later if needed
+
+**Alternative:** Once BlazorIntro/Tasker has backend, create clean repo with just the polished code
 
 ### Core Features (MVP - Must Have)
 
+- ✅ Create, read, update, delete tasks (frontend done)
+- ✅ Mark tasks as complete (frontend done)
+- ✅ Form validation (frontend done)
+- ✅ Responsive design (frontend done)
 - [ ] User registration & authentication (ASP.NET Core Identity)
-- [ ] Create, read, update, delete tasks
+- [ ] User-specific task lists (data isolation)
+- [ ] Database storage (EF Core + SQL Server)
+- [ ] Web API backend (RESTful endpoints)
 - [ ] Task categories/tags
 - [ ] Due dates and priority levels
-- [ ] Mark tasks as complete
-- [ ] User-specific task lists (data isolation)
-- [ ] Responsive design (mobile-friendly)
 
 ### Advanced Features (Nice to Have)
 
@@ -105,42 +210,38 @@ Basic Blazor WebAssembly learning project to understand fundamentals.
 
 ### Technical Requirements
 
-**Frontend:**
+**Frontend:** ✅ 80% Done
+- ✅ Blazor WebAssembly
+- ✅ Bootstrap 5
+- ✅ Form validation
+- [ ] Loading states & error handling (add with API)
 
-- Blazor WebAssembly
-- Bootstrap 5 or Tailwind CSS
-- Form validation
-- Loading states & error handling
+**Backend:** 🔴 To Build This Week
+- [ ] ASP.NET Core 8 Web API
+- [ ] RESTful endpoints
+- [ ] JWT authentication
+- [ ] Repository pattern (optional)
+- [ ] Proper error responses
 
-**Backend:**
+**Database:** 🔴 To Build This Week
+- [ ] SQL Server or PostgreSQL
+- [ ] Entity Framework Core
+- [ ] Code-First migrations
+- [ ] Proper relationships (User → Tasks)
 
-- ASP.NET Core 8 Web API
-- RESTful endpoints
-- JWT authentication
-- Repository pattern
-- Proper error responses
+**DevOps:** 🔴 Later
+- [ ] Docker containerization
+- [ ] GitHub Actions CI/CD
+- [ ] Deployed to Azure/Railway/Fly.io
+- [ ] Environment variables for secrets
 
-**Database:**
-
-- SQL Server or PostgreSQL
-- Entity Framework Core
-- Code-First migrations
-- Proper relationships (User → Tasks)
-
-**DevOps:**
-
-- Docker containerization
-- GitHub Actions CI/CD
-- Deployed to Azure/Railway/Fly.io
-- Environment variables for secrets
-
-**Testing:**
-
-- Unit tests for business logic (50%+ coverage)
-- Integration tests for API endpoints
+**Testing:** 🔴 Later
+- [ ] Unit tests for business logic (50%+ coverage)
+- [ ] Integration tests for API endpoints
 
 ### Production Readiness Checklist
 
+**MVP (Target: Dec 15, 2025)**
 - [ ] All MVP features implemented and tested
 - [ ] Professional UI/UX (no placeholder text)
 - [ ] Mobile responsive (test on phone)
@@ -163,50 +264,272 @@ Basic Blazor WebAssembly learning project to understand fundamentals.
 - [ ] Swagger API documentation
 - [ ] At least 3 different users can test it
 
+**Polish (Target: Dec 22, 2025)**
+- [ ] All advanced features from "nice to have" list
+- [ ] Unit tests with 60%+ coverage
+- [ ] Docker compose for easy local setup
+- [ ] CI/CD pipeline running
+- [ ] Performance optimized
+- [ ] Accessibility audit passed
+
+### Progress Tracker
+
+| Week | Target | Status | Notes |
+|------|--------|--------|-------|
+| Nov 18-24 | Database integration | 🔴 Not Started | EF Core + migrations |
+| Nov 25-Dec 1 | API backend | 🔴 Not Started | RESTful endpoints |
+| Dec 2-8 | Authentication | 🔴 Not Started | Identity + JWT |
+| Dec 9-15 | Polish & Deploy | 🔴 Not Started | README, screenshots, Azure |
+| Dec 16-22 | Advanced features | 🔴 Not Started | Categories, due dates |
+
 ### Screenshots Needed
 
-1. Login/Register page
-2. Task list view (empty state & with data)
-3. Create/Edit task form
-4. Task details view
-5. Mobile responsive view
+1. ✅ Task list view (have from Tasker)
+2. ✅ Create/Edit task form (have from Tasker)
+3. [ ] Login/Register page
+4. [ ] Task details view with categories and due dates
+5. [ ] Mobile responsive view
+6. [ ] Empty state
+7. [ ] Task filters and search
 
-### GitHub README Template
+---
 
-```markdown
-# Task Manager Pro
+## 🚀 Project 3: Blog Platform
 
-A full-stack task management application built with Blazor WebAssembly and ASP.NET Core.
+**Status:** 🔴 Planned | **Production Ready:** 🔴 No (0%)
+**Target Completion:** January 15, 2026
 
-🔗 **[Live Demo](https://your-app-url.com)**
+### Why This Project?
 
-## Features
+- Shows content management capabilities
+- Rich text editing (advanced UI component)
+- Role-based authorization (admin vs user)
+- Image upload and storage
 
-- ✅ User authentication & authorization
-- ✅ CRUD operations for tasks
-- ✅ Task categorization and priorities
-- ✅ Responsive design
+### Core Features (MVP)
 
-## Tech Stack
+- [ ] User registration & login
+- [ ] Create/edit/delete blog posts (authenticated users)
+- [ ] Rich text editor for post content
+- [ ] Post categories/tags
+- [ ] Comments on posts
+- [ ] Like/reaction system
+- [ ] Author profiles
+- [ ] Admin dashboard (moderate posts/comments)
 
-- **Frontend:** Blazor WebAssembly, Bootstrap 5
-- **Backend:** ASP.NET Core 8 Web API
-- **Database:** SQL Server, Entity Framework Core
-- **Authentication:** JWT, ASP.NET Core Identity
-- **DevOps:** Docker, GitHub Actions, Azure
+### Advanced Features
 
-## Screenshots
+- [ ] Image uploads (Azure Blob Storage / AWS S3)
+- [ ] Search functionality
+- [ ] Post drafts vs published
+- [ ] Social media sharing
+- [ ] Email notifications for comments
+- [ ] SEO-friendly URLs
+- [ ] Analytics dashboard
 
-[Add screenshots here]
+### Technical Stack
 
-## Setup Instructions
+- Blazor Server (for SEO benefits) or WASM
+- ASP.NET Core Web API
+- SQL Server with EF Core
+- Identity with Roles (Admin, Author, User)
+- File storage service
+- TinyMCE or Quill.js for rich text
 
-[Detailed setup steps]
+### Production Checklist
 
-## API Documentation
+- [ ] All MVP features complete
+- [ ] Role-based access control working
+- [ ] Image uploads functional
+- [ ] Professional blog theme
+- [ ] Mobile responsive
+- [ ] README with screenshots
+- [ ] Deployed with demo content
+- [ ] Unit & integration tests
 
-Available at `/swagger` when running locally
-```
+---
+
+## 🚀 Project 4: E-Commerce Store
+
+**Status:** 🔴 Planned | **Production Ready:** 🔴 No (0%)
+**Target Completion:** February 1, 2026
+
+### Why This Project?
+
+- Most comprehensive full-stack project
+- Demonstrates complex business logic
+- Shows state management skills
+- Payment integration (Stripe)
+- Admin panel development
+
+### Core Features (MVP)
+
+- [ ] Product catalog with categories
+- [ ] Product search & filtering
+- [ ] Shopping cart (persist in database)
+- [ ] User authentication
+- [ ] Checkout process
+- [ ] Order management
+- [ ] Admin panel (CRUD products)
+- [ ] Order history
+
+### Advanced Features
+
+- [ ] Stripe payment integration
+- [ ] Inventory management
+- [ ] Product reviews & ratings
+- [ ] Wishlist
+- [ ] Email order confirmations
+- [ ] Order status tracking
+- [ ] Sales analytics dashboard
+
+### Technical Stack
+
+- Blazor WebAssembly
+- ASP.NET Core Web API
+- SQL Server with complex relationships
+- Stripe API
+- Identity for auth
+- SignalR for real-time updates (optional)
+
+### Production Checklist
+
+- [ ] Full shopping flow working
+- [ ] Admin panel complete
+- [ ] Test mode payment working
+- [ ] Professional product images
+- [ ] Mobile responsive design
+- [ ] Deployed with sample products
+- [ ] Comprehensive README
+
+---
+
+## 🚀 Project 5: Recipe Sharing App
+
+**Status:** 🔴 Planned | **Production Ready:** 🔴 No (0%)
+**Target Completion:** February 15, 2026
+
+### Why This Project?
+
+- Social features (following, liking)
+- Image handling
+- Complex filtering/search
+- API integration (nutrition data)
+
+### Core Features (MVP)
+
+- [ ] User accounts
+- [ ] Create/share recipes
+- [ ] Recipe categories
+- [ ] Image uploads
+- [ ] Like/save recipes
+- [ ] User profiles
+- [ ] Search recipes
+
+### Advanced Features
+
+- [ ] Follow other users
+- [ ] Nutrition information API
+- [ ] Recipe ratings/reviews
+- [ ] Meal planning calendar
+- [ ] Shopping list generator
+- [ ] Recipe collections
+
+### Technical Stack
+
+- Blazor WASM
+- ASP.NET Core API
+- PostgreSQL
+- Azure Blob Storage for images
+- External nutrition API
+
+---
+
+## 📊 Portfolio Readiness Matrix
+
+| Project       | Backend | Auth | Database | API | Tests | Docker | Deployed | README | **READY?** |
+| ------------- | ------- | ---- | -------- | --- | ----- | ------ | -------- | ------ | ---------- |
+| BlazorIntro   | 🔴      | 🔴   | 🔴       | 🔴  | 🔴    | 🔴     | 🔴       | 🟡     | **🔴 No (30%)** |
+| Task Manager  | 🔴      | 🔴   | 🔴       | 🔴  | 🔴    | 🔴     | 🔴       | 🔴     | **🔴 No**  |
+| Blog Platform | 🔴      | 🔴   | 🔴       | 🔴  | 🔴    | 🔴     | 🔴       | 🔴     | **🔴 No**  |
+| E-Commerce    | 🔴      | 🔴   | 🔴       | 🔴  | 🔴    | 🔴     | 🔴       | 🔴     | **🔴 No**  |
+| Recipe App    | 🔴      | 🔴   | 🔴       | 🔴  | 🔴    | 🔴     | 🔴       | 🔴     | **🔴 No**  |
+
+**Current Progress:**
+- BlazorIntro: Frontend 80% done, needs backend
+- Others: 0% (planned for after Task Manager Pro is complete)
+
+**Target:** 3 projects with all ✅ by February 15, 2026
+
+**Revised Strategy:** Focus on making BlazorIntro/Tasker portfolio-ready before starting new projects
+
+---
+
+## 🎯 Updated Timeline
+
+### November 18-24: Database Week
+**Project:** BlazorIntro/Tasker
+- Learn EF Core
+- Set up database
+- Migrate from localStorage to database
+- **Deliverable:** Working database integration
+
+### November 25 - December 1: API Week
+**Project:** BlazorIntro/Tasker
+- Create Web API project
+- Build RESTful endpoints
+- Connect Blazor to API
+- **Deliverable:** Full-stack application
+
+### December 2-8: Auth Week
+**Project:** BlazorIntro/Tasker
+- Implement ASP.NET Core Identity
+- Add login/register pages
+- Secure API endpoints
+- **Deliverable:** Multi-user support
+
+### December 9-15: Polish & Deploy Week
+**Project:** BlazorIntro/Tasker → Task Manager Pro
+- Add advanced features (categories, due dates)
+- Write README with screenshots
+- Deploy to Azure
+- **Deliverable:** First portfolio project complete ✅
+
+### December 16 - January 15: Blog Platform
+- Start from scratch with learned patterns
+- Faster development (know the stack)
+- **Deliverable:** Second portfolio project
+
+### January 16 - February 15: E-Commerce Store
+- Most complex project
+- Showcase all skills
+- **Deliverable:** Third portfolio project + Job ready
+
+---
+
+## 📝 Lessons Learned
+
+### What Worked Well with Tasker
+- ✅ Building small, functional feature first (localStorage version)
+- ✅ Component separation (Tasker + TaskerLine)
+- ✅ Data annotations for validation
+- ✅ Incremental development
+
+### What to Apply to Next Projects
+- 🎯 Start with working frontend, then add backend
+- 🎯 Use data models that can easily become entities
+- 🎯 Plan for database relationships from the start
+- 🎯 Document as you build, not after
+
+### What to Avoid
+- ❌ Don't build too many frontend-only projects
+- ❌ Don't skip backend integration "for later"
+- ❌ Don't forget about authentication from the start
+- ❌ Don't deploy without proper error handling
+
+---
+
+_This portfolio plan is updated weekly. Focus on quality over quantity - 3 great projects better than 10 mediocre ones._
 
 ---
 
